@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:alpha="0.8"
+    android:orientation="vertical"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:minHeight="80dp"
+        android:minWidth="80dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPlaceInfo"
+            style="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="13 St abdel Rasoul"
+            android:textSize="15sp"
+
+
+            />
+
+        <Button
+            android:id="@+id/btnRegisterThis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_btn3"
+            android:padding="10dp"
+            android:text="Ok, Register"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:visibility="gone"
+
+
+            />
+        <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+            android:id="@+id/progressViewAddingHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:mpb_progressStyle="circular"
+            android:visibility="gone"
+
+
+            />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/loginFacebook"
+        style="@style/FacebookLoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+
+        />
+
+    <!--/>-->
+    <!--<Button-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/fb_login_button"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:text="Continue with Facebook"-->
+    <!---->
+    <!--/>-->
+
+    <!--<com.facebook.widget.LoginButton xmlns:fb="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/loginFacebookButton"-->
+    <!--style="@style/FacebookLoginButton"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--fb:login_text="@string/loginFacebookButton"-->
+    <!--fb:logout_text="" />-->
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/loginGooglePlus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+
+
+        />
+
+</LinearLayout>

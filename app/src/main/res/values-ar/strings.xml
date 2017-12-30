@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">In_A_Click</string>
+    <string name="title_activity_map_tracking_actvity">Map</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="latitude_label">Latitude</string>
+    <string name="longitude_label">Longitude</string>
+    <string name="last_update_time_label">Last location update time</string>
+
+    <string name="location_updated_message">Location updated</string>
+    <string name="ourServices">Our Services</string>
+    <string name="aboutUs">About Us</string>
+    <string name="contactUs">Contact Us</string>
+    <string name="title_activity_driver_map">Map</string>
+
+    <string name="google_direction_api">AIzaSyAPvNmlpIwuzinDyox39qIgSmfkAh2Mg54</string>
+
+    <string name="fb_app_id20130074">1998556493759923</string>
+
+
+    <string-array name="arr_user_titles">
+        <item>Profile</item>
+        <item>Map</item>
+        <item>Trips</item>
+        <item>Homes</item>
+        <item>Settings</item>
+        <item>SignOut</item>
+    </string-array>
+
+    <string-array name="arr_driver_titles">
+        <item>Profile</item>
+        <item>Map</item>
+        <item>Trips</item>
+        <item>Vehicles</item>
+        <item>Settings</item>
+        <item>SignOut</item>
+    </string-array>
+
+
+    <!-- Toast -->
+    <string name="set_location_on_map">Set location on map</string>
+
+
+    <string-array name="titles_cars">
+        <item>عائليه 15 ج.م</item>
+        <item>فاخره 15 ج.م</item>
+        <item>إقتصاديه 10 ج.م</item>
+        <item>ذوي الاحتياجات الخاصه 15 ج.م</item>
+        <item>ونش 10 ج.م</item>
+        <item>سيارة نقل 10 ج.م</item>
+    </string-array>
+    <string-array name="titles_homes">
+        <item>غرفه</item>
+        <item>مزرعه</item>
+        <item>فيلا</item>
+        <item>شقه</item>
+        <item>شاليه</item>
+    </string-array>
+
+    <string name="add_new_location">Add new location</string>
+    <string name="location_list">Locations</string>
+    <string name="need_location_permission_message">You need to enable location permissions first</string>
+    <string name="settings_label">Settings</string>
+    <string name="setting_enabled" >EnabledSetting</string>
+    <string name="location_permissions">Location Permissions</string>
+    <string name="enable_geofences">Enable Geofences</string>
+    <string name="privacy">http://www.google.com/policies/privacy</string>
+    <string name="ringer_permissions">Ringer Permissions</string>
+    <string name="silent_mode_activated">Silent mode activated</string>
+    <string name="touch_to_relaunch">Touch to launch the app.</string>
+    <string name="back_to_normal">Back to normal</string>
+    <string name="chips_add_rem">Add categories of your vehicle   feel free to add/remove what you want</string>
+    <string name="cancelReq">You can cancel request   If u want</string>
+
+    <string-array name="options">
+        <item>Driver</item>
+        <item>Home Owner</item>
+    </string-array>
+
+</resources>

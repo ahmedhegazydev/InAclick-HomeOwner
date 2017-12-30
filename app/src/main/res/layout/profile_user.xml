@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/tvErrorRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Enter Name"
+                    android:textColor="@color/md_red_A400"
+                    android:visibility="gone" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ivProfile"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/profile"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FF000000"
+                    android:layout_margin="5dp"
+
+
+                    />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="Email"
+                    android:inputType="none"
+                    android:padding="10dp"
+                    android:enabled="false"
+
+
+                    />
+
+                <!--<com.rengwuxian.materialedittext.MaterialEditText-->
+                <!--android:id="@+id/etPassword"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:hint="Password"-->
+                <!--android:inputType="textPassword"-->
+                <!--android:padding="10dp"-->
+
+                <!--/>-->
+
+                <com.maksim88.passwordedittext.PasswordEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="Password"
+                    android:inputType="none"
+                    android:paddingBottom="20dp"
+                    android:enabled="false"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="@android:color/darker_gray" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="Name"
+                    android:inputType="textPersonName|textCapWords"
+                    android:padding="10dp"
+
+                    />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/etCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="City"
+                    android:inputType="textPersonName|textCapWords"
+                    android:padding="10dp"
+
+
+                    />
+
+                <!--<com.rengwuxian.materialedittext.MaterialEditText-->
+                <!--android:id="@+id/etPhone"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:hint="Phone Number"-->
+                <!--android:inputType="phone"-->
+                <!--android:padding="10dp"-->
+
+                <!--/>-->
+                <LinearLayout
+                    android:id="@+id/llLoginWithPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccpRegister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:ccpDialog_keyboardAutoPopup="true"
+                        app:ccpDialog_showPhoneCode="true"
+                        app:ccp_autoDetectCountry="false"
+                        app:ccp_autoDetectLanguage="true"
+                        app:ccp_contentColor="@android:color/darker_gray"
+                        app:ccp_defaultLanguage="ARABIC"
+                        app:ccp_defaultNameCode="sa"
+                        app:ccp_defaultPhoneCode="20"
+                        app:ccp_showFullName="false"
+                        app:ccp_showNameCode="true"
+                        app:ccp_textGravity="CENTER"
+
+                        />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Phone Number"
+                        android:inputType="none"
+                        android:enabled="false"
+                        android:padding="10dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/md_grey_200"
+                        android:gravity="left"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:text="Register as "
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="20sp"
+
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cbUser"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:text="User" />
+
+
+                        <CheckBox
+                            android:id="@+id/cbWorker"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:padding="5dp"
+                            android:text="Worker" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSelectedRole"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="10dp"
+                            android:text="Selected Role : "
+                            android:textSize="15sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tvRegSelectedRole"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="None"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llRole"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/md_grey_200"
+                            android:gravity="left"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="10dp"
+                            android:text="Select Your Role"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <LinearLayout
+
+                            android:id="@+id/llAsDriver"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <View
+                                android:id="@+id/wallDriver"
+                                android:layout_width="8dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/md_red_200"
+                                android:visibility="gone"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/tvAsDriver"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:padding="10dp"
+                                android:text="As Driver/Car Owner"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+
+                                />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:background="@color/md_grey_200"
+
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/llRentAHome"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <View
+                                android:id="@+id/wallHomeRen"
+                                android:layout_width="8dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/md_red_200"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tvHomeAsRent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:padding="10dp"
+                                android:text="Make Home For Rent/Home Owner"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+        <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:textColor="#FFFFFF"-->
+        <!--android:text="Save"-->
+        <!--android:background="#0aa4ff"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="17sp"-->
+        <!--android:id="@+id/btnSave"-->
+        <!--android:visibility="gone"-->
+        <!--/>-->
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="50dp"
+            android:visibility="visible"
+            android:src="@drawable/save" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabTakePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/fabSave"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="true"
+            android:layout_margin="7dp"
+            android:src="@drawable/take_photo2"
+            android:visibility="gone"
+
+            />
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

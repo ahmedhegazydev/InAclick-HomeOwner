@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="countries">
+        <item>Cheapest</item>
+        <item>Fastest</item>
+        <item>Broader</item>
+        <item>High quality</item>
+        <item>Closest</item>
+    </array>
+
+
+</resources>

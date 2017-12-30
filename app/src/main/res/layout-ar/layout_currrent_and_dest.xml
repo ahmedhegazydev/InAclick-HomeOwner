@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardElevation="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7"
+                    android:layout_marginLeft="10dp"
+                    android:paddingRight="15dp">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/dot_source"
+android:layout_gravity="center"
+
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCurrentLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="86"
+                    android:background="@color/md_blue_grey_50"
+                    android:padding="8dp"
+                    android:text="9 Al-Bahren"
+
+                    android:textColor="@color/md_black_1000" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7">
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llSource"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:weightSum="100"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/dot_square"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="86"
+                    android:background="@color/md_blue_grey_50"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="7dp"
+                    android:paddingTop="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+
+                        <!--<com.autofit.et.lib.AutoFitEditText-->
+                        <!--android:id="@+id/etDest"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="90"-->
+                        <!--android:background="@android:color/transparent"-->
+                        <!--android:focusable="true"-->
+                        <!--android:focusableInTouchMode="true"-->
+                        <!--android:hint="where to?"-->
+                        <!--android:inputType="textMultiLine|textNoSuggestions"-->
+                        <!--android:isScrollContainer="false"-->
+                        <!--android:lines="1"-->
+                        <!--android:maxLength="240"-->
+                        <!--android:padding="1dp"-->
+                        <!--android:scrollHorizontally="true"-->
+                        <!--android:textColor="@color/md_black_1000"-->
+                        <!--android:textSize="15sp"-->
+
+
+                        <!--/>-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="7dp"
+                            android:layout_weight="10"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/ivClear"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:src="@drawable/delete3"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+                        <EditText
+                            android:id="@+id/etDest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="90"
+                            android:background="@android:color/transparent"
+                            android:ellipsize="end"
+                            android:hint="where to?"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:padding="2dp"
+                            android:scrollHorizontally="true"
+                            android:textColor="@color/md_black_1000"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_add_black_24dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="19dp"
+                android:layout_marginTop="22dp"
+                android:background="@color/md_blue_grey_100" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

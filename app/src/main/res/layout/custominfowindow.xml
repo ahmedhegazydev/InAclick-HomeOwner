@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_border"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.ToggleGroup
+        android:id="@+id/groupHomeCatName"
+        style="@style/Widget.Material.ToggleGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_margin="5dp"
+        app:allowUnselected="false"
+        app:divider="@drawable/toggle_divider"
+        app:exclusive="true"
+        app:orientation="horizontal"
+
+
+        >
+
+        <android.support.v7.widget.ToggleButton
+            android:id="@+id/toggleRoom"
+            style="@style/Widget.Material.ToggleButton"
+            android:text="Room"
+
+            />
+
+        <android.support.v7.widget.ToggleButton
+            android:id="@+id/toggleFarm"
+            style="@style/Widget.Material.ToggleButton"
+            android:checked="true"
+            android:text="Farm"
+
+
+            />
+
+        <android.support.v7.widget.ToggleButton
+            android:id="@+id/toggleVilla"
+            style="@style/Widget.Material.ToggleButton"
+            android:text="Villa"
+
+
+            />
+
+        <android.support.v7.widget.ToggleButton
+            android:id="@+id/toggleHome"
+            style="@style/Widget.Material.ToggleButton"
+            android:text="Home"
+
+
+            />
+
+        <android.support.v7.widget.ToggleButton
+            android:id="@+id/toggleChalet"
+            style="@style/Widget.Material.ToggleButton"
+            android:text="Chalet"
+
+
+            />
+
+    </android.support.v7.widget.ToggleGroup>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRegisterNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_btn2"
+            android:clickable="true"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/true_answer"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@drawable/go_next"
+            android:text="Next"
+            android:textColor="#FF4081"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+</LinearLayout>

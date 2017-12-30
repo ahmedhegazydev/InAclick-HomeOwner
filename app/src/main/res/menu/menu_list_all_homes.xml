@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:title="SignOut"
+        android:id="@+id/homeOwnerSignOut"
+        android:icon="@drawable/exit"
+        />
+
+    <item
+        android:title="ListMyAllHomes"
+        android:id="@+id/listAllHomes"
+        android:icon="@drawable/list"
+        />
+
+
+</menu>

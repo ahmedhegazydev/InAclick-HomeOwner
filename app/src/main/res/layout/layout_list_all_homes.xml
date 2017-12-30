@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+
+    >
+
+
+    <LinearLayout
+        android:id="@+id/llFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:textSize="17sp"
+
+            android:textStyle="bold"
+
+            />
+
+        <android.support.v7.widget.ToggleGroup
+            android:id="@+id/groupHomeCatName"
+            style="@style/Widget.Material.ToggleGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:allowUnselected="false"
+            app:divider="@drawable/toggle_divider"
+            app:exclusive="true"
+            app:orientation="horizontal"
+
+            >
+
+            <android.support.v7.widget.ToggleButton
+                android:id="@+id/toggleRoom"
+                style="@style/Widget.Material.ToggleButton"
+                android:text="Room"
+
+                />
+
+            <android.support.v7.widget.ToggleButton
+                android:id="@+id/toggleFarm"
+                style="@style/Widget.Material.ToggleButton"
+                android:checked="true"
+                android:text="Farm"
+
+
+                />
+
+            <android.support.v7.widget.ToggleButton
+                android:id="@+id/toggleVilla"
+                style="@style/Widget.Material.ToggleButton"
+                android:text="Villa"
+
+
+                />
+
+            <android.support.v7.widget.ToggleButton
+                android:id="@+id/toggleHome"
+                style="@style/Widget.Material.ToggleButton"
+                android:text="Home"
+
+
+                />
+
+            <android.support.v7.widget.ToggleButton
+                android:id="@+id/toggleChalet"
+                style="@style/Widget.Material.ToggleButton"
+                android:text="Chalet"
+                />
+            <android.support.v7.widget.ToggleButton
+                android:id="@+id/toggleAll"
+                style="@style/Widget.Material.ToggleButton"
+                android:text="All"
+                />
+
+        </android.support.v7.widget.ToggleGroup>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewWall"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/llFilter"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/colorAccent"
+
+
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvListAllHomes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/viewWall"
+        android:orientation="vertical"
+        android:scrollbars="none"
+
+        />
+
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:id="@+id/progressLoadAllHomes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

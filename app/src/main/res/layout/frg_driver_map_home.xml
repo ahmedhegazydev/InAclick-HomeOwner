@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:htext="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/tools"
+    android:id="@+id/rlMainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+
+    >
+
+    <LinearLayout
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_indigo_200"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+
+            <Button
+                android:id="@+id/btnOpenMenu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/titlebar_menu_selector"
+                android:visibility="gone" />
+
+            <TextSwitcher
+                android:id="@+id/textSwitcherStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/btnOpenMenu"
+                android:padding="10dp"
+                android:text="Online"
+                android:textColor="@color/md_indigo_400"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
+                />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switchDriverStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:checked="true"
+
+                />
+
+            <Button
+                android:id="@+id/btnStartNavigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_toLeftOf="@id/switchDriverStatus"
+                android:background="@drawable/button_selector"
+                android:drawableLeft="@drawable/navigation3"
+                android:text="Start Driving "
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:visibility="gone"
+
+
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pbChangeStatusDriver"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status"
+        android:indeterminateOnly="true"
+        android:visibility="gone" />
+
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapViewDriver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pbChangeStatusDriver" />
+
+    <include
+        android:id="@+id/layoutProgressDriverHaveWork"
+        layout="@layout/notice_progress"
+        android:visibility="gone"
+
+        />
+
+    <include
+        android:id="@+id/layoutCustomerInfo"
+        layout="@layout/layout_customer_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+
+
+        />
+
+
+    <Button
+        android:id="@+id/btnArrivedAlready"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/AntiqueWhite"
+        android:gravity="center"
+        android:text="Already Arrived"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+
+
+        />
+
+
+    <com.hanks.htextview.HTextView
+        android:id="@+id/textStartTripNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/Brown"
+        android:text="Start Trip Now"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        htext:animateType="anvil"
+
+        />
+
+
+    <!--<com.mapbox.mapboxsdk.maps.MapView-->
+    <!--android:id="@+id/mapViewNavigation"-->
+    <!--android:layout_below="@id/status"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--mapbox:mapbox_cameraTargetLat="40.73581"-->
+    <!--mapbox:mapbox_cameraTargetLng="-73.99155"-->
+    <!--android:visibility="gone"-->
+    <!--mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v10"-->
+    <!--mapbox:mapbox_cameraZoom="11" />-->
+
+</RelativeLayout>

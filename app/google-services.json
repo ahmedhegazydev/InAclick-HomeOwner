@@ -1,0 +1,182 @@
+{
+  "project_info": {
+    "project_number": "297872801711",
+    "firebase_url": "https://whatsapp-38bc2.firebaseio.com",
+    "project_id": "whatsapp-38bc2",
+    "storage_bucket": "whatsapp-38bc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297872801711:android:48a99127e2e425c6",
+        "android_client_info": {
+          "package_name": "com.example.ahmed.whatsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297872801711-lr7l6pbri4gtghstb6ds4m4pon5q9a4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg6cK7mKeVFgusOC87SYm3CEiY3Hlc6aI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297872801711:android:6d7eb44073338a1f",
+        "android_client_info": {
+          "package_name": "com.example.ahmed.convertwebsitetoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297872801711-78ri4chg4l686agj4mrb9teup9pus4f1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ahmed.convertwebsitetoapp",
+            "certificate_hash": "c975c4e3aef4625255bfe0f0b8475ff04b6d5797"
+          }
+        },
+        {
+          "client_id": "297872801711-lr7l6pbri4gtghstb6ds4m4pon5q9a4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg6cK7mKeVFgusOC87SYm3CEiY3Hlc6aI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "297872801711-lr7l6pbri4gtghstb6ds4m4pon5q9a4f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297872801711:android:4454569ae8450e9d",
+        "android_client_info": {
+          "package_name": "com.example.ahmed.attendanceorgapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297872801711-4kr4ngjb253i2l52p8lgmh0eotng5mcj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ahmed.attendanceorgapp",
+            "certificate_hash": "9f3665426d6a218848a311d6ab7fa15df5346a59"
+          }
+        },
+        {
+          "client_id": "297872801711-omtn3uultjrl7mn5doj9hrurj92cql5h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ahmed.attendanceorgapp",
+            "certificate_hash": "c975c4e3aef4625255bfe0f0b8475ff04b6d5797"
+          }
+        },
+        {
+          "client_id": "297872801711-lr7l6pbri4gtghstb6ds4m4pon5q9a4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg6cK7mKeVFgusOC87SYm3CEiY3Hlc6aI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "297872801711-lr7l6pbri4gtghstb6ds4m4pon5q9a4f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297872801711:android:01c6cb8de3675f40",
+        "android_client_info": {
+          "package_name": "com.example.hp.in_a_click"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297872801711-ssms9vjur3m2s1588b0tehqieii6deto.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hp.in_a_click",
+            "certificate_hash": "c975c4e3aef4625255bfe0f0b8475ff04b6d5797"
+          }
+        },
+        {
+          "client_id": "297872801711-lr7l6pbri4gtghstb6ds4m4pon5q9a4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg6cK7mKeVFgusOC87SYm3CEiY3Hlc6aI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "297872801711-lr7l6pbri4gtghstb6ds4m4pon5q9a4f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

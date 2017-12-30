@@ -1,0 +1,94 @@
+Support user (Home/Car) login via
+1-Email = > Email Confirmation
+2-Phone Number = > SMS
+Reg
+1-With social  media
+2-With email and pass and phone number
+===============
+if login
+with email
+-he will have to verify his email
+with phone
+-he will have to verify his phone number using the sent code
+===================================
+Will help user in registration via social media
+by getting the available info from Facebook/Google siginin and complete his reg
+===================================
+will support only one app for both dealers (Driver/Home Owners and Trips/Homes for Normal User)
+=============
+the login GUI will detect who the logged in and navigate him for appropriate interface(User Map Or Driver Map)
+================================
+
+Keys Maker
+Functions in future
+before reg add  restriction model, full option , airconditioning, each hav
+2008 above
+
+home owner
+=============================
+Error:Execution failed for task ':app:processDebugManifest'. >
+Manifest merger failed : Attribute meta-data#com.facebook.sdk.ApplicationId@value value=(@string/fb_app_id20130074)
+ from AndroidManifest.xml:122:13-54 is also present at [com.firebaseui:firebase-ui-auth:1.2.0] AndroidManifest.xml:23:13-60 value=(@string/facebook_application_id).
+Suggestion: add 'tools:replace="android:value"' to <meta-data> element at AndroidManifest.xml:120:9-122:57 to override.
+===============================================
+1-auto fetch current location when the user open the map
+2-centered pen location icon for getting the center of map location and convert it to location name
+3-Thus, the user can select (from location) and (to location)
+4-design of Where to, from to and add stop UI
+5-Designing of the possibility of Adding Work/Home/Saved places/Enter destination later/Set location on map UI
+6-Createing a custom auto place picker using web services then user can select from fetched locations
+7-implementing add home
+==========================================
+نقدر نبعت كود ليه بعد اما يتم قبوله بالنسبه للرايفر
+يتم اختيار اقرب عربيه اونلاين بوجود 10تواني واذا لم يستجيب يتم احضار اللي بعده ابعد منه وهكذا
+
+ممكن نبدأ بهذه الاسعار حسب الفئات
+ويتم تعديلها لاحقاً ان استدعى الامر ،
+
+In a click  Luxury
+Base Fare: 7ج.م
+Per Minute: 0.40ج.م
+Per Km: 2ج.م
+Cancellation Fee: 10ج.م
+Service Fees: 0ج.م
+Minimum Fare: 15ج.م
+
+In a click Economy
+Base Fare: 6ج.م
+Per Minute: 0.25ج.م
+Per Km: 1.85ج.م
+Cancellation Fee: 10ج.م
+Service Fees: 0ج.م
+Minimum Fare: 10ج.م
+
+In a click Family
+Base Fare: 7ج.م
+Per Minute: 0.40ج.م
+Per Km: 2ج.م
+Cancellation Fee: 10ج.م
+Service Fees: 0ج.م
+Minimum Fare: 15ج.م
+
+In a click special needs
+Base Fare: 7ج.م
+Per Minute: 0.40ج.م
+Per Km: 2ج.م
+Cancellation Fee: 10ج.م
+Service Fees: 0ج.م
+Minimum Fare: 15ج.م
+
+In a click Lorry
+Base Fare: 6ج.م
+Per Minute: 0.25ج.م
+Per Km: 1.85ج.م
+Cancellation Fee: 10ج.م
+Service Fees: 50 ج.م
+Minimum Fare: 10ج.م
+
+In a click    winch
+Base Fare: 6ج.م
+Per Minute: 0.25ج.م
+Per Km: 1.85ج.م
+Cancellation Fee: 10ج.م
+Service Fees: 50 ج.م
+Minimum Fare: 10ج.م

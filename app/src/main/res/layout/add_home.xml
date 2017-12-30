@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:coverflow="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:id="@+id/ivBack"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@color/md_blue_grey_50"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/etEnterHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="90"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="add home .."
+                    android:imeActionLabel="search"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:paddingLeft="3dp"
+                    android:scrollHorizontally="true"
+                    android:textColor="@color/md_black_1000"
+                    android:textSize="15sp"
+
+                    />
+                <!--City and Country Selector -->
+                <!--<AutoCompleteTextView-->
+                <!--android:id="@+id/autoCompTextView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="90"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--android:ellipsize="end"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:hint="add home .."-->
+                <!--android:imeActionLabel="search"-->
+                <!--android:imeOptions="actionSearch"-->
+                <!--android:inputType="text"-->
+                <!--android:lines="1"-->
+                <!--android:maxLines="1"-->
+                <!--android:paddingLeft="3dp"-->
+                <!--android:scrollHorizontally="true"-->
+                <!--android:textColor="@color/md_black_1000"-->
+                <!--android:textSize="15sp"-->
+
+                <!--/>-->
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="7dp"
+                    android:layout_weight="10"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ivClear"
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:src="@drawable/delete3"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+            android:id="@+id/pbAddHome"
+            style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:mpb_progressStyle="horizontal" />
+
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/bottomSheetAddWork"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:clipToPadding="true"
+                android:visibility="visible"
+                app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+                <!--<ListView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:id="@+id/listViewLocations"-->
+                <!--/>-->
+
+            </android.support.v4.widget.NestedScrollView>
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

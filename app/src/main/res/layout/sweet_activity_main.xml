@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".main.Main3Activity"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/rlCars"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rlHomes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <ImageView
+        android:id="@+id/ivMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:weightSum="60">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+
+
+
+                />
+
+            <ImageView
+                android:id="@+id/ivOrderCar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="onClickOrderCar"
+                android:scaleType="centerCrop"
+
+
+
+
+                />
+
+            <ImageView
+                android:id="@+id/ivOrderHome"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="5dp"
+                android:onClick="onClickOrderHome"
+                android:scaleType="centerCrop"
+
+
+
+
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+android:id="@+id/llContactUsBootom"
+            android:gravity="center|bottom"
+            android:orientation="horizontal"
+            android:weightSum="60">
+
+            <!--<ImageView-->
+            <!--android:id="@+id/imageView2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:layout_weight="20"-->
+            <!--android:onClick="onClickOurServices"-->
+            <!--android:padding="2dp"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/ourservices" />-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:layout_weight="20"-->
+            <!--android:onClick="onClickAboutUs"-->
+            <!--android:padding="2dp"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/aboutus"-->
+
+            <!--/>-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:layout_weight="20"-->
+
+            <!--android:onClick="onClickContactUs"-->
+            <!--android:padding="2dp"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/contactus"-->
+
+            />
+
+            <TextView
+                android:id="@+id/tvOruSer"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_weight="20"
+                android:gravity="center"
+                android:onClick="onClickOurServices"
+                android:text="@string/ourServices"
+                android:textColor="#143D66"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/tvAboutUs"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_weight="20"
+                android:gravity="center"
+                android:onClick="onClickAboutUs"
+                android:text="@string/aboutUs"
+                android:textColor="#143D66"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/tvContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_weight="20"
+                android:gravity="center"
+                android:onClick="onClickContactUs"
+                android:text="@string/contactUs"
+                android:textColor="#143D66"
+                android:textStyle="bold"
+
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

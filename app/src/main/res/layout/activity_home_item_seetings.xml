@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hp.in_a_click.activities.HomeItemSettings">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:titleTextColor="#ffffff"
+
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolBar"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="100"
+
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:padding="6dp"
+                    android:paddingRight="20dp"
+                    android:text="Category"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+
+                    />
+
+                <android.support.v7.widget.ToggleGroup
+                    android:id="@+id/groupHomeCatName"
+                    style="@style/Widget.Material.ToggleGroup"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="6dp"
+                    android:layout_weight="70"
+                    app:allowUnselected="false"
+                    app:divider="@drawable/toggle_divider"
+                    app:exclusive="true"
+                    app:orientation="horizontal"
+
+                    >
+
+                    <android.support.v7.widget.ToggleButton
+                        android:id="@+id/toggleRoom"
+                        style="@style/Widget.Material.ToggleButton"
+                        android:text="Room"
+
+                        />
+
+                    <android.support.v7.widget.ToggleButton
+                        android:id="@+id/toggleFarm"
+                        style="@style/Widget.Material.ToggleButton"
+                        android:checked="true"
+                        android:text="Farm"
+
+
+                        />
+
+                    <android.support.v7.widget.ToggleButton
+                        android:id="@+id/toggleVilla"
+                        style="@style/Widget.Material.ToggleButton"
+                        android:text="Villa"
+
+
+                        />
+
+                    <android.support.v7.widget.ToggleButton
+                        android:id="@+id/toggleHome"
+                        style="@style/Widget.Material.ToggleButton"
+                        android:text="Home"
+
+
+                        />
+
+                    <android.support.v7.widget.ToggleButton
+                        android:id="@+id/toggleChalet"
+                        style="@style/Widget.Material.ToggleButton"
+                        android:text="Chalet" />
+
+                    <!-- <android.support.v7.widget.ToggleButton
+                         android:id="@+id/toggleAll"
+                         style="@style/Widget.Material.ToggleButton"
+                         android:text="All" />-->
+
+                </android.support.v7.widget.ToggleGroup>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llDatePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="100"
+
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:padding="10dp"
+                    android:text="Date"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="70"
+                    android:drawableRight="@drawable/edit2"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingLeft="0dp"
+                    android:text="13/12/2017"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+
+                    >
+
+                    <Switch
+                        android:id="@+id/switchEnabling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="70"
+                    android:gravity="center_vertical"
+                    android:text="Enabled"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+
+
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:weightSum="100">
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:text="For Salary"
+                    android:id="@+id/cbForSalary"
+
+
+                    />
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:text="For Rent"
+                    android:id="@+id/cbForRent"
+
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="100"
+
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:padding="10dp"
+                    android:text="Location"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="70"
+                    android:drawableRight="@drawable/edit2"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:text="El-Haram"
+                    android:textSize="20sp"
+
+
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llExpectedSalary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp"
+
+                android:weightSum="100"
+
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:padding="10dp"
+                    android:text="Salary Expected"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/tvExpectedSalary"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="70"
+                    android:drawableRight="@drawable/edit2"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:text="20,000"
+                    android:textSize="20sp"
+
+
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

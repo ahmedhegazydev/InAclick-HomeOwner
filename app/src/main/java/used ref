@@ -1,0 +1,89 @@
+Android Studio Tutorial - Real Time Location Tracking Part 2 (Tracking)
+https://www.youtube.com/watch?v=eYk-gokOyA8
+Location Alarm
+Android Studio Tutorial - Geo Fire
+https://www.youtube.com/watch?v=Rwz-F4YOMBM
+https://github.com/rengwuxian/MaterialEditText
+https://github.com/chrisjenx/Calligraphy
+check email existing firbase
+login and signin using database firebase not using  or get data from database
+https://stackoverflow.com/questions/45875718/getting-manifest-merger-issue-while-adding-facebook-android-sdk
+https://stackoverflow.com/questions/45553058/android-manifest-merger-failed-gms-play-services-firebase
+https://stackoverflow.com/questions/16314651/customize-android-facebook-login-button
+https://stackoverflow.com/questions/40093781/check-if-given-email-exists
+https://stackoverflow.com/questions/18671067/how-to-stop-handler-runnable
+https://developers.google.com/places/web-service/autocomplete
+https://www.youtube.com/watch?time_continue=442&v=GUlEZIoQGeM
+https://github.com/delaroy/AndroidLocationGeofencing
+http://codetheory.in/google-place-api-autocomplete-service-in-android-application/
+https://code.tutsplus.com/articles/google-play-services-using-the-places-api--cms-23715
+https://www.programcreek.com/java-api-examples/index.php?api=com.google.android.gms.location.places.AutocompletePrediction
+https://stackoverflow.com/questions/23883235/google-map-for-android-my-location-custom-button
+https://stackoverflow.com/questions/32036656/setting-src-and-background-for-floatingactionbutton
+https://developer.android.com/training/location/retrieve-current.html#last-known
+https://github.com/hootsuite/nachos
+http://www.learn-android-easily.com/2013/06/android-textswitcher.html
+https://stackoverflow.com/questions/5191825/is-there-an-api-for-google-maps-navigation-in-android
+//android directions github
+https://www.google.com.eg/search?biw=1455&bih=686&ei=uLorWvCiLsjjU4uxu8AJ&q=android+directions+github&oq=android+directions+github&gs_l=psy-ab.3...3650.7936.0.8112.7.7.0.0.0.0.582.728.0j1j5-1.2.0....0...1c.1.64.psy-ab..5.2.726...0j0i22i30k1j33i160k1.0.lKSdRum1lHg
+https://github.com/jakob-grabner/Circle-Progress-View
+https://github.com/passsy/android-HoloCircularProgressBar
+https://github.com/sparrow007/CircularProgressbar
+https://github.com/lopspower/CircularProgressBar
+https://github.com/ylyc/circular_progress_bar
+//animated text
+https://github.com/hanks-zyh/HTextView
+https://github.com/yikwing/HTextView
+//error resolving
+https://stackoverflow.com/questions/32244851/androidjava-lang-outofmemoryerror-failed-to-allocate-a-23970828-byte-allocatio
+https://developers.google.com/places/android-api/placepicker
+http://joerichard.net/android/android-how-to-change-fragments-when-navigation-drawer-item-selected/
+
+
+
+Fragments
+Google APIS
+RESTFUL json(Volley, Retrofit, )
+Firebase Database (cloud message APIs) / authentication/authorization.
+Pushing notification
+Animation(Custom)
+Sharing, Version control ( Git )
+Google Maps(Directions, Routing, Navigate, GPS, MapZen, MapBox, ....)
+Best practice
+Debugging
+material design(FAB, Collapsed toolbar, and  more)
+Problem solving
+GPS, GeoFire
+Dependency injection(Dagger, Butterknife, )
+Design patterns
+deal with different screen sizes
+frameworks and libraries
+interface guidelines
+sensors, such as gyroscopes and accelerometers
+offline storage, threading
+
+
+
+Working under pressure
+Loving team work
+Thinking with him
+love of coding
+love of solving problems
+love of being international
+Want to going a head
+==================
+GeoFire
+Firebase Database, Queries, ...
+Google play services apis
+Dependency injection(ButterKnife, Dagger
+Restful apis, JSON
+Beast frameworks and apis ->
+ImageLoader   -> Glide, Picasso, Fresco
+Payment APIS ->BrainTrees
+Design patterns
+Desgin Architectures
+Integration
+Animation
+Material Design
+
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="options">
+        <item>Driver</item>
+        <item>Home Owner</item>
+    </string-array>
+
+
+    <integer-array name="arr_user_icons">
+        <item>@drawable/icon_home</item>
+        <item>@drawable/icon_calendar</item>
+        <item>@drawable/icon_settings</item>
+        <item>@drawable/icon_profile</item>
+        <item>@drawable/icon_settings</item>
+        <item>@drawable/icon_profile</item>
+    </integer-array>
+    <integer-array name="arr_driver_icons">
+        <item>@drawable/icon_home</item>
+        <item>@drawable/icon_calendar</item>
+        <item>@drawable/icon_settings</item>
+        <item>@drawable/icon_profile</item>
+        <item>@drawable/icon_settings</item>
+        <item>@drawable/icon_profile</item>
+    </integer-array>
+
+    <integer-array name="arr_homeowner_icons">
+        <item>@drawable/icon_home</item>
+        <item>@drawable/icon_calendar</item>
+        <item>@drawable/icon_settings</item>
+        <item>@drawable/icon_profile</item>
+        <item>@drawable/icon_settings</item>
+        <item>@drawable/icon_profile</item>
+    </integer-array>
+    <integer-array name="arr_homes_icons">
+        <item>@drawable/co4</item>
+        <item>@drawable/co2</item>
+        <item>@drawable/co5</item>
+        <item>@drawable/co1</item>
+        <item>@drawable/co3</item>
+    </integer-array>
+
+    <integer-array name="arr_cars_icons">
+        <item>@drawable/h2</item>
+        <item>@drawable/h1</item>
+        <item>@drawable/h3</item>
+        <item>@drawable/h5</item>
+        <item>@drawable/h6</item>
+        <item>@drawable/h4</item>
+    </integer-array>
+
+
+</resources>
