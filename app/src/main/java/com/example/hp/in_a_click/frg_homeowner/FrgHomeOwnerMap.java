@@ -49,6 +49,7 @@ import com.example.hp.in_a_click.R;
 import com.example.hp.in_a_click.activities.ActionBarActivity;
 import com.example.hp.in_a_click.activities.HomeItemSettings;
 import com.example.hp.in_a_click.adapters.RecyclerViewAdapter;
+import com.example.hp.in_a_click.interfaces.RecyclerTouchListener;
 import com.example.hp.in_a_click.model.HomeItem;
 
 import com.example.hp.in_a_click.signinout.DriverSignInOutActivity;
@@ -251,9 +252,14 @@ public class FrgHomeOwnerMap extends Fragment implements GoogleApiClient.OnConne
         ;
     }
 
+    TextView tvNoHomes = null;
     private void listAllHomes() {
 
         final View layout_list_all_homes = LayoutInflater.from(getActivity()).inflate(R.layout.layout_list_all_homes, null);
+
+
+        tvNoHomes = layout_list_all_homes.findViewById(R.id.tvNoHomes);
+        tvNoHomes.setVisibility(View.GONE);
 
 
         rvListAllHomes = layout_list_all_homes.findViewById(R.id.rvListAllHomes);
@@ -300,7 +306,7 @@ public class FrgHomeOwnerMap extends Fragment implements GoogleApiClient.OnConne
                         String query = ((ToggleButton) toggleGroup.findViewById(toggleGroup.getCheckedId())).getText().toString();
                         recyclerViewAdapter.getFilter().filter(query);
                         //materialProgressBar.setVisibility(View.GONE);
-                        Log.e("QueryString", query);
+                        //Log.e("QueryString", query);
 
 
                     }
@@ -322,6 +328,8 @@ public class FrgHomeOwnerMap extends Fragment implements GoogleApiClient.OnConne
                 String query = ((ToggleButton) toggleGroup.findViewById(toggleGroup.getCheckedId())).getText().toString();
                 recyclerViewAdapter.getFilter().filter(query);
                 materialProgressBar.setVisibility(View.GONE);
+                if (homeItemList.isEmpty())
+                    tvNoHomes.setVisibility(View.VISIBLE);
             }
 
             @Override
@@ -330,6 +338,7 @@ public class FrgHomeOwnerMap extends Fragment implements GoogleApiClient.OnConne
 
             }
         });
+
 
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity())
@@ -346,6 +355,11 @@ public class FrgHomeOwnerMap extends Fragment implements GoogleApiClient.OnConne
         if (!alertDialogListHomes.isShowing()) {
             alertDialogListHomes.show();
         }
+
+
+
+
+
 
 
     }
@@ -1119,48 +1133,6 @@ public class FrgHomeOwnerMap extends Fragment implements GoogleApiClient.OnConne
         void onLongClick(View view, int position);
     }
 
-    public class RecyclerTouchListener implements RecyclerView.OnItemTouchListener {
-
-        public GestureDetector gestureDetector;
-        public ClickListener clickListener;
-
-        public RecyclerTouchListener(Context context, final RecyclerView recyclerView, final ClickListener clickListener) {
-            this.clickListener = clickListener;
-            gestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
-                @Override
-                public boolean onSingleTapUp(MotionEvent e) {
-                    return true;
-                }
-
-                @Override
-                public void onLongPress(MotionEvent e) {
-                    View child = recyclerView.findChildViewUnder(e.getX(), e.getY());
-                    if (child != null && clickListener != null) {
-                        clickListener.onLongClick(child, recyclerView.getChildPosition(child));
-                    }
-                }
-            });
-        }
-
-        @Override
-        public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
-
-            View child = rv.findChildViewUnder(e.getX(), e.getY());
-            if (child != null && clickListener != null && gestureDetector.onTouchEvent(e)) {
-                clickListener.onClick(child, rv.getChildPosition(child));
-            }
-            return false;
-        }
-
-        @Override
-        public void onTouchEvent(RecyclerView rv, MotionEvent e) {
-        }
-
-        @Override
-        public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
-
-        }
-    }
 
     public class CustomInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
 

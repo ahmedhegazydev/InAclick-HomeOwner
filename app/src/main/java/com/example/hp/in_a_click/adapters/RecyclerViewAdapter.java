@@ -51,7 +51,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
         holder.tvDate.setText(homeItem.getInsertDate());
-        holder.tvAddress.setText(homeItem.getLocationMame());
+        holder.tvAddress.setText(homeItem.getLocationName());
         holder.tvHomeCatName.setText(homeItem.getCatName());
 
 

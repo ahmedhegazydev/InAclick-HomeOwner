@@ -362,6 +362,9 @@ dependencies {
     compile 'biz.kasual:materialnumberpicker:1.2.1'
 
 //    compile 'com.github.rahatarmanahmed:circularprogressview:2.5.0'
+    compile 'com.zhihu.android:matisse:0.4.3'
+
+
 
 
 }

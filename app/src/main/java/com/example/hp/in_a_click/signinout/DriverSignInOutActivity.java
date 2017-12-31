@@ -59,7 +59,6 @@ import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.example.hp.in_a_click.R;
 import com.example.hp.in_a_click.activities.ActionBarActivity;
-import com.example.hp.in_a_click.model.UserDriver;
 import com.example.hp.in_a_click.model.UserHomeOwner;
 import com.example.hp.in_a_click.model.UserNormal;
 

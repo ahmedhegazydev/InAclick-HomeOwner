@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.ToggleButton;
@@ -32,6 +33,7 @@ import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlacePicker;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -41,9 +43,12 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.irozon.sneaker.Sneaker;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 import biz.kasual.materialnumberpicker.MaterialNumberPicker;
 import butterknife.BindView;
@@ -80,6 +85,10 @@ public class HomeItemSettings extends AppCompatActivity implements DatePickerDia
     Context context = null;
     @BindView(R.id.toolBar)
     Toolbar toolbar;
+    DatabaseReference reference = null;
+    boolean isEditted = false;
+    boolean isPlaceChanged = false;
+    Place place = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,41 +111,54 @@ public class HomeItemSettings extends AppCompatActivity implements DatePickerDia
         homeItem = (HomeItem) getIntent().getSerializableExtra("HomeItem");
 
 
-        //set values
-        String catName = homeItem.getCatName();
-        for (int i = 0; i < toggleGroup.getChildCount(); i++) {
-            ToggleButton toggleButton = (ToggleButton) toggleGroup.getChildAt(i);
-            if (toggleButton.getText() == catName) {
-                toggleButton.setChecked(true);
-                break;
+        if (homeItem != null) {
+            //set values
+            String catName = homeItem.getCatName();
+            for (int i = 0; i < toggleGroup.getChildCount(); i++) {
+                ToggleButton toggleButton = (ToggleButton) toggleGroup.getChildAt(i);
+                if (toggleButton.getText() == catName) {
+                    toggleButton.setChecked(true);
+                    break;
+                }
+            }
+            //toggleGroup.findViewById(toggleGroup.getCheckedId());
+
+
+
+
+            if (homeItem.getInsertDate() != null && homeItem.getInsertDate() != "")
+                tvDate.setText(homeItem.getInsertDate());
+
+
+            if (homeItem.isEnabled()) {
+                switchEnabling.setChecked(true);
+                textViewStatus.setText("Enabled");
+            } else {
+                switchEnabling.setChecked(false);
+                textViewStatus.setText("Disabled");
             }
 
+
+            cbForRent.setChecked(false);
+            cbForSalary.setChecked(false);
+            if (homeItem.getSalaryOrRent() == 0)
+                cbForSalary.setChecked(true);
+            else
+                cbForRent.setChecked(true);
+
+
+            if (homeItem.getSalaryFromTo() != null && homeItem.getSalaryFromTo() != "")
+                tvExpectedSalary.setText(homeItem.getSalaryFromTo());
+
+
+            if (homeItem.getLocationName() != null && homeItem.getLocationName() != "")
+                tvLocation.setText(homeItem.getLocationName());
+
+
         }
-        //toggleGroup.findViewById(toggleGroup.getCheckedId());
-
-
-        if (homeItem.getInsertDate() != null && homeItem.getInsertDate() != "")
-            tvDate.setText(homeItem.getInsertDate());
-
-
-        if (homeItem.isEnabled())
-            switchEnabling.setChecked(true);
-        else
-            switchEnabling.setChecked(false);
-
-
-        cbForRent.setChecked(false);
-        cbForSalary.setChecked(false);
-        if (homeItem.getSalaryOrRent() == 0)
-            cbForSalary.setChecked(true);
-        else
-            cbForRent.setChecked(true);
 
 
     }
-
-
-    DatabaseReference reference = null;
 
     private void initRef() {
 
@@ -148,9 +170,6 @@ public class HomeItemSettings extends AppCompatActivity implements DatePickerDia
 
 
     }
-
-    boolean isEditted = false;
-
 
     private void initToolBar() {
 
@@ -188,10 +207,10 @@ public class HomeItemSettings extends AppCompatActivity implements DatePickerDia
                 ToggleButton toggleButton = ((ToggleButton) group.findViewById(group.getCheckedId()));
                 strCheckedItem = toggleButton.getText().toString();
                 isEditted = true;
-
-
             }
         });
+        strCheckedItem = ((ToggleButton) toggleGroup.findViewById(toggleGroup.getCheckedId())).getText().toString();
+
 
         llExpectedSalary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -252,7 +271,7 @@ public class HomeItemSettings extends AppCompatActivity implements DatePickerDia
 
                 PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
                 try {
-                    startActivityForResult(builder.build((Activity) getApplicationContext()), PLACE_PICKER_REQUEST);
+                    startActivityForResult(builder.build(HomeItemSettings.this), PLACE_PICKER_REQUEST);
                 } catch (GooglePlayServicesRepairableException e) {
                     e.printStackTrace();
                 } catch (GooglePlayServicesNotAvailableException e) {
@@ -268,11 +287,38 @@ public class HomeItemSettings extends AppCompatActivity implements DatePickerDia
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     textViewStatus.setText("Enabled");
+                    isEditted = true;
                 } else {
                     textViewStatus.setText("Disabled");
+                    isEditted = true;
+                }
+            }
+        });
+
+
+        cbForRent.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked) {
+                    if (cbForSalary.isChecked()) {
+                        cbForSalary.setChecked(false);
+                    }
+                    isEditted = true;
                 }
 
-                isEditted = true;
+
+            }
+        });
+
+        cbForSalary.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    if (cbForRent.isChecked())
+                        cbForRent.setChecked(false);
+                    isEditted = true;
+                }
 
 
             }
@@ -286,9 +332,9 @@ public class HomeItemSettings extends AppCompatActivity implements DatePickerDia
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == PLACE_PICKER_REQUEST) {
             if (resultCode == HomeItemSettings.RESULT_OK) {
-                Place place = PlacePicker.getPlace(data, this);
+                place = PlacePicker.getPlace(data, this);
                 tvLocation.setText(place.getAddress().toString());
-                isEditted = true;
+                isEditted = isPlaceChanged = true;
             }
 
         }
@@ -351,39 +397,74 @@ public class HomeItemSettings extends AppCompatActivity implements DatePickerDia
         alertDialog.setCancelable(false);
         alertDialog.setCanceledOnTouchOutside(false);
         if (!alertDialog.isShowing())
-            alertDialog.show();
+            // alertDialog.show();
 
 
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+            reference.child(homeItem.getRefId()).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists() && dataSnapshot.getChildrenCount() > 0) {
+                        HomeItem homeItem = dataSnapshot.getValue(HomeItem.class);
+//                        String key = homeItem.getRefId();
+//
+//                        HashMap<String, Object> hashMap = new HashMap<String, Object>();
+//                        hashMap.put("locationName", tvLocation.getText().toString());
+//                        hashMap.put("lat", "");
+//                        hashMap.put("lon", "");
+//                        hashMap.put("catName", strCheckedItem);
+//                        hashMap.put("salaryOrRent", (cbForSalary.isChecked() ? 0 : 1));
+//                        hashMap.put("insertDate", tvDate.getText().toString());
+//                        hashMap.put("salaryFromTo", tvExpectedSalary.getText().toString());
+//                        hashMap.put("enabled", (switchEnabling.isEnabled()) ? true : false);
+//                        hashMap.put("refId", homeItem.getRefId());
 
-                if (dataSnapshot.exists() && dataSnapshot.getChildrenCount() > 0) {
-                    HomeItem homeItem = dataSnapshot.getValue(HomeItem.class);
-                    reference.setValue(new HomeItem("", "", strCheckedItem, tvLocation.getText().toString(), tvDate.getText().toString(),
-                            tvExpectedSalary.getText().toString(), (cbForSalary.isChecked() ? 0 : 1), (switchEnabling.isEnabled()) ? true : false))
-                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful() && task.isComplete()) {
-                                        if (alertDialog.isShowing()) alertDialog.dismiss();
-                                        //finish();
-                                        Toast.makeText(HomeItemSettings.this, "Saved", Toast.LENGTH_SHORT).show();
+                        HomeItem homeItem1 = null;
 
+                        if (isPlaceChanged && place != null) {
+                            LatLng latLng = place.getLatLng();
+                            homeItem1 = new HomeItem(latLng.latitude + "", latLng.longitude + "",
+                                    strCheckedItem, tvLocation.getText().toString(),
+                                    tvDate.getText().toString(), tvExpectedSalary.getText().toString(),
+                                    (cbForSalary.isChecked() ? 0 : 1),
+                                    (switchEnabling.isEnabled()), homeItem.getRefId());
+                        } else {
+                            homeItem1 = new HomeItem(homeItem.getLat(), homeItem.getLon(),
+                                    strCheckedItem, tvLocation.getText().toString(),
+                                    tvDate.getText().toString(), tvExpectedSalary.getText().toString(),
+                                    (cbForSalary.isChecked() ? 0 : 1),
+                                    (switchEnabling.isEnabled()), homeItem.getRefId());
+
+                        }
+
+
+                        reference.child(HomeItemSettings.this.homeItem.getRefId())
+                                //.updateChildren(hashMap)
+                                .setValue(homeItem1)
+                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isSuccessful() && task.isComplete()) {
+                                            if (alertDialog.isShowing()) alertDialog.dismiss();
+                                            //finish();
+                                            //Toast.makeText(HomeItemSettings.this, "Saved", Toast.LENGTH_SHORT).show();
+                                            isEditted = false;
+
+
+                                        }
                                     }
-                                }
-                            });
+                                });
 
+
+
+                    }
 
                 }
 
-            }
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+                }
+            });
 
 
     }
@@ -408,7 +489,7 @@ public class HomeItemSettings extends AppCompatActivity implements DatePickerDia
                 deleteThisHomeItem();
                 break;
             case R.id.homeItemEdit:
-                editThisHomeItem();
+                confirmSaving();
                 break;
             default:
                 break;
@@ -418,12 +499,30 @@ public class HomeItemSettings extends AppCompatActivity implements DatePickerDia
         return super.onOptionsItemSelected(item);
     }
 
-    private void editThisHomeItem() {
-
-
-    }
-
     private void deleteThisHomeItem() {
+
+        new AlertDialog.Builder(this)
+                .setMessage("Do u want to delete this item ???? ")
+                .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        reference.child(homeItem.getRefId()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                //Sneaker.with((Activity) getApplicationContext()).setTitle("Deleted Success").sneakSuccess();
+                                finish();
+                                Toast.makeText(context, "Deleted", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .show();
 
 
     }
@@ -433,4 +532,6 @@ public class HomeItemSettings extends AppCompatActivity implements DatePickerDia
         tvDate.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
         isEditted = true;
     }
+
+
 }

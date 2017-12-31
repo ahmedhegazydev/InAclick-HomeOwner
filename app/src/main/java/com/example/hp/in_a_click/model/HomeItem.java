@@ -6,21 +6,22 @@ import java.io.Serializable;
  * Created by ahmed on 28/12/17.
  */
 
-public class HomeItem implements Serializable{
+public class HomeItem implements Serializable {
 
-    String lat = "", lon = "", catName = "", locationMame = "", insertDate = "",
+    public String lat = "", lon = "", catName = "", locationName = "", insertDate = "",
             salaryFromTo = "";
     int salaryOrRent = 0;//0 salary and 1 for rent
     boolean enabled = false;//by default
     String refId = "";
 
-    public HomeItem(String lat, String lon, String catName, String locationMame, String insertDate, String refId) {
+
+    public HomeItem(String lat, String lon, String catName, String locationName, String insertDate, String refId) {
         this.lat = lat;
         this.lon = lon;
         this.catName = catName;
-        this.locationMame = locationMame;
+        this.locationName = locationName;
         this.insertDate = insertDate;
-        this.refId=  refId;
+        this.refId = refId;
 
 
     }
@@ -29,15 +30,16 @@ public class HomeItem implements Serializable{
 
     }
 
-    public HomeItem(String lat, String lon, String catName, String locationMame, String insertDate, String salaryFromTo, int salaryOrRent, boolean enabled) {
+    public HomeItem(String lat, String lon, String catName, String locationName, String insertDate, String salaryFromTo, int salaryOrRent, boolean enabled, String refId) {
         this.lat = lat;
         this.lon = lon;
         this.catName = catName;
-        this.locationMame = locationMame;
+        this.locationName = locationName;
         this.insertDate = insertDate;
         this.salaryFromTo = salaryFromTo;
         this.salaryOrRent = salaryOrRent;
         this.enabled = enabled;
+        this.refId = refId;
     }
 
     public String getRefId() {
@@ -105,11 +107,9 @@ public class HomeItem implements Serializable{
         this.catName = catName;
     }
 
-    public String getLocationMame() {
-        return locationMame;
+    public String getLocationName() {
+        return locationName;
     }
 
-    public void setLocationMame(String locationMame) {
-        this.locationMame = locationMame;
-    }
+
 }

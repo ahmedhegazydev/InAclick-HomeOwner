@@ -101,6 +101,9 @@
 
         />
 
+
+
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvListAllHomes"
         android:layout_width="match_parent"
@@ -117,6 +120,26 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:visibility="invisible" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_below="@id/llFilter"
+        android:layout_height="match_parent"
+        android:text="No Home Yet\nGo to map the add new ones"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:drawableRight="@drawable/warning"
+        android:padding="10dp"
+        android:id="@+id/tvNoHomes"
+        android:visibility="gone"
+
+
+
+
+
+        />
 
 
 </RelativeLayout>
